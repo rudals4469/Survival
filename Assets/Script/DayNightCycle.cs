@@ -30,7 +30,6 @@ public class DayNightCycle : MonoBehaviour
     {
         _timeRate = 1.0f / fullDayLengh;
         time = startTime;
-        
     }
 
     // Update is called once per frame
@@ -48,7 +47,7 @@ public class DayNightCycle : MonoBehaviour
     void UpdateLighting(Light lightSource, Gradient gradient, AnimationCurve intensityCurve)
     {
         float intensity = intensityCurve.Evaluate(time);
-        lightSource.transform.eulerAngles = (time - (lightSource == sun ? 0.25f : 0.75f)) * noon * 4f; 
+        lightSource.transform.eulerAngles = (time - (lightSource == sun ? 0.25f : 0.75f)) * noon * 4f; // 괜히 불편해.. 이거 심지어 강의 내용 그대론데..
         // 정오 계산
         lightSource.color = gradient.Evaluate(time);
         lightSource.intensity = intensity;

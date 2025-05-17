@@ -10,7 +10,7 @@ public class Condition : MonoBehaviour
     public float startValue;
     public float passiveValue;
     public Image uiBar;
-
+    
     private void Start()
     {
         curValue = startValue;
@@ -33,7 +33,7 @@ public class Condition : MonoBehaviour
         curValue = Mathf.Max(curValue - amount, 0.0f);
     }
 
-    public float GetPercentage()
+    private float GetPercentage()
     {
         return curValue / maxValue;
     }

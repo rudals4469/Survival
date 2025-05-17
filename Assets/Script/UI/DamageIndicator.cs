@@ -41,4 +41,5 @@ public class DamageIndicator : MonoBehaviour
 
         image.enabled = false;
     }
+
 }
