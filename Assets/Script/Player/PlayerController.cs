@@ -116,10 +116,8 @@ public class PlayerController : MonoBehaviour
     }
     public void OnInventory(InputAction.CallbackContext context)
     {
-        Debug.Log("gd");
         if (context.phase == InputActionPhase.Started)
         {
-            Debug.Log("gd2");
             inventory?.Invoke();
             ToggleCursor();
         }
